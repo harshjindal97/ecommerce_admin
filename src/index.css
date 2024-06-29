@@ -2,3 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+    background: #f1f1f1;
+}
+/* .sidebarWrapper {background-color: aliceblue;} */
+.main .contentRight .dashboard{
+    height: 100vh;
+    background: #efefef;
+}
+.imgWrapper{
+    /* padding:10px 20% !important; */
+    width: 70%;
+    padding: 10px 20px;
+}
+.sidebarTab{margin: 0px 10px;}
+.sidebarTab ul{padding: 0px;}
+.sidebarTab button{justify-content: start !important; padding: 10px 10px !important;position: relative;}
+.sidebarTab .sidebarButton::before{content: ''; position: absolute;top: 50%;left: 0;width: 4px;height: 0px;background: blue;opacity: 0;transition: all 0.3s ease-in-out;}
+.sidebarTab ul li:hover button::before{
+    opacity: 1;top: 0;height: 100%;
+}
+.sidebarTab button .icon svg{font-size: 25px; margin-right: 5px;}
+
+.sidebarTab button:hover{background: rgb(239, 239, 239);}

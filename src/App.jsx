@@ -1,13 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-
+import { createContext, useState } from 'react'
+import { BrowserRouter , Routes , Route } from 'react-router-dom'
+import Sidebar from './Components/sidebar/Sidebar';
+import Dashboard from './pages/dashboard/Dashboard';
+const MyContext = createContext();
 function App() {
   const [count, setCount] = useState(0)
-
+  const values = {
+    
+  }
   return (
     <>
-      <h1>Welcome</h1>
+      <BrowserRouter>
+        <MyContext.Provider value={values} >
+          <section className='main d-flex'>
+            <div className='sidebarWrapper w-[18%]'>
+              <Sidebar/>
+            </div>
+            <div className='contentRight w-[82%]'>
+            <Routes>
+              <Route path='/' exact={true} element={<Dashboard/>}/>
+            </Routes>
+            </div>
+          </section>
+        </MyContext.Provider>
+      </BrowserRouter>
     </>
   )
 }
