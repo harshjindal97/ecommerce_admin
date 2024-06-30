@@ -26,13 +26,14 @@ const Sidebar = () => {
                         </Button>
                     </li>
                     <li>
+                        <Link to='/productUpload'>
                         <Button className='w-100 text-dark sidebarButton'>
                             <span className='icon w-[25px] h-[25px] flex items-center justify-center rounded-md'><RiProductHuntLine />
                             </span>
                             Products
                             <span className='ml-auto'><FaAngleRight />
                             </span>
-                        </Button>
+                        </Button></Link>
                         <div className='submenu'>
                             <Button className='w-100'>
                                 <span className='dot'>.</span>
