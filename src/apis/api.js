@@ -19,3 +19,22 @@ export const postData = async (url, formData) => {
       throw e;
     }
   };
+  export const updateData = async (url, formData) => {
+    try {
+      const { data } = await axios.put("http://localhost:4000" + url, formData);
+      return data;
+    } catch (e) {
+      console.error('Error:', e.response?.data || e.message);
+      throw e;
+    }
+  }; 
+
+  export const deleteData = async (url) => {
+    try {
+      const { data } = await axios.delete("http://localhost:4000" + url);
+      return data;
+    } catch (e) {
+      console.error('Error:', e.response?.data || e.message);
+      throw e;
+    }
+  };

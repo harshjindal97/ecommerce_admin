@@ -25,3 +25,7 @@ body{
 .sidebarTab button .icon svg{font-size: 25px; margin-right: 5px;}
 
 .sidebarTab button:hover{background: rgb(239, 239, 239);}
+
+.updateData .css-1t1j96h-MuiPaper-root-MuiDialog-paper{
+    min-width: 600px;
+}
